@@ -7,7 +7,7 @@ wc_effects = []
 with open(r'C:\Study\FSE\Lab_2\1.WCData.txt', 'r', encoding='utf-8') as file: 
     lines = file.readlines()
 
-for line in lines[2:]:
+for line in lines[2:]: #пропуск заголовка
     line = line.strip()
     if not line:
         continue
@@ -18,10 +18,10 @@ for line in lines[2:]:
         air_temp = int(parts[1])
         wind_speed = int(parts[2])
 
-        answer = 35.74 + (0.6125 * air_temp) + ((0.4275 * air_temp) - 35.75) * (wind_speed ** 0.16)
+        answer = 35.74 + (0.6125 * air_temp) + ((0.4275 * air_temp) - 35.75) * (wind_speed ** 0.16) #считает ощущаемую температуру
 
         answer_end = round(answer, 1)
-        raznica = round(answer_end - air_temp, 1)
+        raznica = round(answer_end - air_temp, 1) #эффект ветра
         
         times.append(
             times_val,
