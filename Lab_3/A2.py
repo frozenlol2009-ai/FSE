@@ -12,7 +12,7 @@ specsym = any(symbol in anythingsym for symbol in password)
 errors = []
 
 if not dlina:
-    errors.append("Длина пароля должна быть от 8 символов.")
+    errors.append("Длина пароля должна быть - 8 символов.")
 if not digital:
     errors.append("В пароле отсутствуют цифры.")
 if not lowersym:
