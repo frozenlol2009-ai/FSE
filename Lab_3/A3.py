@@ -18,5 +18,5 @@ elif (ispolzovano > 800):
 price =  round (price, 2)
 midprice = round(price/ispolzovano, 2) 
 
-print ("Предыдущее           Текущее          Использовано         К оплате            Ср. цена m^3")
-print (f"    {schetchik1}                  {schetchik2}                {ispolzovano}                 {price}                 {midprice}")
+print ("  Предыдущее\tТекущее\t\tИспользовано\tК оплате\tСр. цена m^3")
+print (f"  {schetchik1}\t\t{schetchik2}\t\t{ispolzovano}\t\t{price}\t\t{midprice}")
