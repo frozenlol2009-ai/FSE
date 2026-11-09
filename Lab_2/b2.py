@@ -42,6 +42,3 @@ with open('output.txt', 'w', encoding = 'utf-8') as file:
         file.write(line)
     file.write(f'-'*100 + '\n')
     file.write(f'The everage adjusted temperature, based on {count} observations, was {end_answer}\n')
-
-
-os.system("start output.txt")
