@@ -4,7 +4,7 @@ times = []
 wc_temps = []
 wc_effects = []
 
-with open(r'.\1.WCData.txt', 'r', encoding='utf-8') as file: 
+with open(r"Lab_2\1.WCData.txt", "r", encoding='utf-8') as file: 
     lines = file.readlines()
 
 for line in lines[2:]: #пропуск заголовка
@@ -42,3 +42,6 @@ with open('output.txt', 'w', encoding = 'utf-8') as file:
         file.write(line)
     file.write(f'-'*100 + '\n')
     file.write(f'The everage adjusted temperature, based on {count} observations, was {end_answer}\n')
+
+
+os.system("start output.txt")
