@@ -4,7 +4,7 @@ times = []
 wc_temps = []
 wc_effects = []
 
-with open(r'C:\Study\FSE\Lab_2\1.WCData.txt', 'r', encoding='utf-8') as file: 
+with open(r'.\1.WCData.txt', 'r', encoding='utf-8') as file: 
     lines = file.readlines()
 
 for line in lines[2:]: #пропуск заголовка
@@ -23,17 +23,9 @@ for line in lines[2:]: #пропуск заголовка
         answer_end = round(answer, 1)
         raznica = round(answer_end - air_temp, 1) #эффект ветра
         
-        times.append(
-            times_val,
-        )
-
-        wc_temps.append(
-            answer_end
-        )
-
-        wc_effects.append(
-            raznica
-        )
+        times.append (times_val)
+        wc_temps.append (answer_end)
+        wc_effects.append (raznica)
 
 count = len(wc_temps)
 summa = sum(wc_temps)
