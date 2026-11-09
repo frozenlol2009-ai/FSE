@@ -29,7 +29,9 @@ def get_card_type(card_number: str) -> str:
         
     elif (length == 13 or length == 16) and card_number.startswith('4'):
         return "Visa"
-        
+    # добавил белкард
+    elif (length == 16) and (card_number.startswith('91123801') or card_number.startswith('91123800')):
+        return "Belcard"
     return "Unknown"
 
 
@@ -49,7 +51,7 @@ def card_validator(card_number: str):
         return
 
     if validate_luhn(clean_number):
-        print(f"Карта {card_number} — Действительна ({card_type})")
+        print(f"Карта {card_number} — VALID ({card_type})")
     else:
         print(f"Карта {card_number} — INVALID (Ошибка алгоритма Луна)")
 
